@@ -2,10 +2,10 @@
 import React from 'react';
 
 const TEAM = [
-  { name: 'Fernanda', role: 'Master Trainer', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400', featured: true },
-  { name: 'Annamaria', role: 'Senior Instructor', image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=400' },
-  { name: 'Ylenia', role: 'Pilates Instructor', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400' },
-  { name: 'Simone', role: 'Pilates Instructor', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400' },
+  { name: 'Fernanda', role: 'Istruttrice Pilates', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400', featured: true },
+  { name: 'Annamaria', role: 'Istruttrice Pilates', image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=400' },
+  { name: 'Ylenia', role: 'Istruttrice Pilates', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400' },
+  { name: 'Simone', role: 'Istruttore Pilates', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400' },
 ];
 
 interface InstructorsProps {

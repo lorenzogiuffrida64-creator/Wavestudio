@@ -77,19 +77,15 @@ export const Footer: React.FC<FooterProps> = ({ onCoursesClick, onBookClick }) =
               <li className="flex items-center gap-2">Tel: <a href="tel:3293597002" className="text-black font-bold hover:text-[#496da1]">3293597002</a></li>
               <li className="flex items-center gap-2">Email: <a href="mailto:wavecatania@gmail.com" className="text-black font-bold hover:text-[#496da1]">wavecatania@gmail.com</a></li>
               <li className="pt-4 text-black font-bold">Via Artale Alagona, 39, Catania, Italy</li>
-              <li className="pt-4 border-t border-black/5 mt-4">Lun - Ven: 07:00 - 21:00</li>
-              <li>Sabato: 09:00 - 14:00</li>
-              <li>Domenica: Chiuso</li>
             </ul>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-widest opacity-40">
-          <p>© 2024 Wave Studio Pilates Catania. All right reserved</p>
+          <p>© 2026 Wave Studio Pilates Catania. Tutti i diritti riservati</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-black">Privacy Policy</a>
-            <a href="#" className="hover:text-black">Terms of Service</a>
-            <a href="#" className="hover:text-black">Credits</a>
+            <a href="#" className="hover:text-black">Termini e Condizioni</a>
           </div>
         </div>
       </div>

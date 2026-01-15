@@ -16,9 +16,9 @@ export const ValueProposition: React.FC = () => {
             </p>
             <div className="space-y-6">
               {[
-                { title: 'Armonia Totale', desc: 'Sincronizziamo respiro e movimento per una mente più chiara.' },
+                { title: 'Armonia Totale', desc: 'Sincronizziamo e guidiamo i tuoi movimenti per un esperienza unica.' },
                 { title: 'Forza Bilanciata', desc: 'Sviluppiamo muscoli lunghi e forti senza stress articolare.' },
-                { title: 'Flusso Gioioso', desc: 'Ogni sessione è progettata per lasciarti rigenerato e vibrante.' }
+                { title: 'Esperienza Unica', desc: 'Ogni sessione è progettata per lasciarti rigenerato e vibrante.' }
               ].map((item, i) => (
                 <div key={i} className="flex gap-4 group">
                   <div className="flex-shrink-0 w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold transition-colors group-hover:bg-[#496da1]">0{i+1}</div>
