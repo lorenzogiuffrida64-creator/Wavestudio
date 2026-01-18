@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wave Studio Pilates Catania | Reformer Pilates, Mat Pilates e Sessioni Private</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Wave Studio Pilates Catania - Il primo studio di Pilates Reformer a Catania. Corsi di Reformer Pilates, Mat Pilates, sessioni private con istruttori certificati. Fondato da Mario Catania, Master Trainer con 15+ anni di esperienza.">
+    <meta name="keywords" content="pilates catania, reformer pilates catania, mat pilates catania, studio pilates sicilia, mario catania pilates, wave studio">
+    <meta name="author" content="Wave Studio Pilates Catania">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wavestudio-two.vercel.app">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wavestudio-two.vercel.app">
+    <meta property="og:title" content="Wave Studio | Pilates Reformer Catania">
+    <meta property="og:description" content="Il primo studio di Pilates Reformer a Catania. Trasforma il tuo corpo con i nostri corsi di Pilates guidati da istruttori certificati.">
+    <meta property="og:image" content="https://wavestudio-two.vercel.app/og-image.jpg">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Wave Studio Pilates">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wave Studio | Pilates Reformer Catania">
+    <meta name="twitter:description" content="Il primo studio di Pilates Reformer a Catania. Trasforma il tuo corpo con i nostri corsi di Pilates.">
+    <meta name="twitter:image" content="https://wavestudio-two.vercel.app/og-image.jpg">
+
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="IT-CT">
+    <meta name="geo.placename" content="Catania">
+    <meta name="geo.position" content="37.525598;15.113236">
+    <meta name="ICBM" content="37.525598, 15.113236">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#496da1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --accent: #496da1;
+        --accent-light: #7a9ccf;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #e9e9e9;
+        color: black;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      
+      /* Refined important word styling with premium serif italic */
+      .important-word {
+        font-family: 'Instrument Serif', serif;
+        color: var(--accent);
+        font-style: italic;
+        font-weight: 400;
+        display: inline-block;
+        position: relative;
+        font-size: 1.15em;
+        line-height: 0.7;
+        vertical-align: baseline;
+      }
+
+      /* Cleaned up and improved underline/highlight effect */
+      .highlight-wave {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .highlight-wave::after {
+        content: '';
+        position: absolute;
+        left: -4%;
+        right: -4%;
+        bottom: 0.05em;
+        height: 0.2em;
+        background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+        opacity: 0.15;
+        z-index: -1;
+        border-radius: 100px;
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .highlight-wave:hover::after {
+        height: 0.45em;
+        opacity: 0.25;
+        bottom: 0;
+      }
+
+      /* Custom Animations */
+      @keyframes drift {
+        0% { transform: translateY(0) translateX(0) rotate(0); }
+        50% { transform: translateY(-20px) translateX(10px) rotate(5deg); }
+        100% { transform: translateY(0) translateX(0) rotate(0); }
+      }
+      .particle {
+        animation: drift 10s infinite ease-in-out;
+      }
+      .gradient-bg {
+        background: linear-gradient(120deg, #e9e9e9 0%, #d8dfea 50%, #e9e9e9 100%);
+        background-size: 200% 200%;
+        animation: gradientShift 15s ease infinite;
+      }
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      /* Micro-interactions */
+      .clickable-reward:hover {
+        transform: scale(1.02);
+        transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Wave Studio Pilates Catania",
+      "description": "Il primo studio di Pilates Reformer a Catania",
+      "url": "https://wavestudio-two.vercel.app",
+      "telephone": "+393293597002",
+      "email": "wavecatania@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Viale Artale Alagona, 39",
+        "addressLocality": "Catania",
+        "addressRegion": "CT",
+        "postalCode": "95126",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.525598,
+        "longitude": 15.113236
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "07:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/wavestudio_ct",
+        "https://www.facebook.com/profile.php?id=61566462159392"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "6"
+      }
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Wave Studio Pilates",
+      "url": "https://wavestudio-two.vercel.app",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+393293597002",
+        "contactType": "customer service",
+        "availableLanguage": "Italian"
+      }
+    }
+    </script>
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Wave Studio Pilates",
+  "description": "Premium Pilates studio in Catania, founded by Mario Catania. Offering Reformer, Mat, and private sessions with a focus on balance and transformation.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
