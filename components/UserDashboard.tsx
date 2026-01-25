@@ -172,7 +172,7 @@ const MiniCalendar: React.FC<{ bookedDates: string[]; onBook: () => void }> = ({
           onClick={onBook}
           className="w-full h-12 bg-[#4A90E2] hover:bg-[#3A7BC8] text-white rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-colors shadow-lg shadow-[#4A90E2]/20"
         >
-          <Plus size={18} /> Prenota Lezione
+          <Plus size={18} /> Prenota Seduta
         </button>
       </div>
     </div>
@@ -215,7 +215,7 @@ export const UserDashboard: React.FC<UserDashboardProps> = ({ user, onLogout }) 
           <div className="w-10 h-10 bg-[#4A90E2] rounded-xl flex items-center justify-center text-white shadow-lg shadow-[#4A90E2]/20">
             <Shield size={24} />
           </div>
-          <span className="font-black uppercase tracking-tighter text-black text-xl">Wave Studio</span>
+          <span className="font-black uppercase tracking-tighter text-black text-xl">Studio Osteopatia</span>
         </div>
 
         <nav className="flex-1 mt-4 px-4 space-y-1">
@@ -260,7 +260,7 @@ export const UserDashboard: React.FC<UserDashboardProps> = ({ user, onLogout }) 
               <div className="w-16 h-16 bg-[#4A90E2] rounded-2xl flex items-center justify-center text-white shadow-xl shadow-[#4A90E2]/20 mb-4 animate-bounce-slow">
                 <Shield size={32} />
               </div>
-              <h2 className="font-black uppercase tracking-tighter text-black text-xl italic leading-none">Wave Studio</h2>
+              <h2 className="font-black uppercase tracking-tighter text-black text-xl italic leading-none">Studio Osteopatia</h2>
               <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#4A90E2] mt-2">Pannello Socio</p>
             </div>
 
@@ -507,7 +507,7 @@ const DashboardHome: React.FC<{ user: { name: string; id: string }; onBook: () =
                     </div>
                     <div className="flex items-center gap-3">
                       <MapPin size={20} className="flex-shrink-0" />
-                      <span className="font-medium">{nextBooking.schedule_slots?.class_type || 'Pilates'} - Wave Studio</span>
+                      <span className="font-medium">{nextBooking.schedule_slots?.class_type || 'Pilates'} - Studio Osteopatia</span>
                     </div>
                   </div>
                 </div>
@@ -517,7 +517,7 @@ const DashboardHome: React.FC<{ user: { name: string; id: string }; onBook: () =
             <div className="bg-gradient-to-br from-[#F9FAFB] to-white rounded-3xl md:rounded-[2.5rem] p-6 md:p-10 border border-[#E5E5E5] text-center">
               <Calendar size={48} className="mx-auto text-[#9CA3AF] mb-4" />
               <h3 className="text-xl font-black text-black mb-2">Nessun appuntamento</h3>
-              <p className="text-[#4B5563] text-sm mb-6">Prenota la tua prossima sessione di Pilates!</p>
+              <p className="text-[#4B5563] text-sm mb-6">Prenota la tua prossima seduta osteopatica!</p>
               <button
                 onClick={onBook}
                 className="h-14 bg-[#4A90E2] text-white px-8 rounded-xl font-bold hover:scale-105 active:scale-95 transition-all text-sm shadow-xl"
@@ -836,7 +836,7 @@ const BookingFlow: React.FC<{ userId: string; preSelectedInstructor?: DBInstruct
                       </div>
                       <div>
                         <p className="font-black text-lg text-black">{inst.name}</p>
-                        <p className="text-xs text-[#9CA3AF] uppercase font-bold tracking-[0.2em]">Istruttore Pilates</p>
+                        <p className="text-xs text-[#9CA3AF] uppercase font-bold tracking-[0.2em]">Osteopata</p>
                       </div>
                     </div>
                   </div>
@@ -1314,7 +1314,7 @@ const MyAppointments: React.FC<{ userId: string }> = ({ userId }) => {
                     )}
                     <div className="flex items-center gap-2 text-sm text-[#4B5563] font-medium">
                       <MapPin size={18} className="text-[#4A90E2]" />
-                      <span>Wave Studio</span>
+                      <span>Studio Osteopatia</span>
                     </div>
                   </div>
                 </div>
@@ -1390,9 +1390,9 @@ const InstructorsView: React.FC<{ onBookInstructor: (instructor: DBInstructor) =
           </div>
           <div className="p-8 md:p-12">
             <h3 className="text-3xl font-black mb-1 text-black italic leading-none">{inst.name}</h3>
-            <p className="text-xs font-black text-[#4A90E2] uppercase tracking-[0.2em] mb-6">Istruttore Pilates</p>
+            <p className="text-xs font-black text-[#4A90E2] uppercase tracking-[0.2em] mb-6">Osteopata</p>
             <p className="text-base text-[#4B5563] leading-relaxed mb-10">
-              {inst.bio || 'Istruttore certificato presso Wave Studio Pilates.'}
+              {inst.bio || 'Istruttore certificato presso Studio Osteopatia Pilates.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -1612,7 +1612,7 @@ const NotificationsView: React.FC<{ userId: string }> = ({ userId }) => {
                     </span>
                   </div>
                   <p className="text-sm md:text-base text-[#4B5563] ml-0 md:ml-6.5 font-medium leading-relaxed">
-                    Con: {booking.schedule_slots?.instructor?.name || 'Istruttore'} - Wave Studio Pilates
+                    Con: {booking.schedule_slots?.instructor?.name || 'Istruttore'} - Studio Osteopatia Pilates
                   </p>
                 </div>
               );

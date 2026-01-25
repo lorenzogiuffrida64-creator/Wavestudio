@@ -39,35 +39,35 @@ const TermsAndPrivacySection: React.FC<TermsAndPrivacySectionProps> = ({ accetto
             <div className="text-xs text-[#4B5563] space-y-4 leading-relaxed">
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">1. Accettazione dei Termini</h4>
-                <p>Registrandoti su Wave Studio Pilates, accetti integralmente i presenti Termini e Condizioni. L'utilizzo dei nostri servizi implica la piena conoscenza e accettazione delle regole qui descritte. Wave Studio si riserva il diritto di modificare questi termini in qualsiasi momento, con notifica agli utenti registrati.</p>
+                <p>Registrandoti su Studio Osteopatia Giulia Patti, accetti integralmente i presenti Termini e Condizioni. L'utilizzo dei nostri servizi implica la piena conoscenza e accettazione delle regole qui descritte. Studio Osteopatia si riserva il diritto di modificare questi termini in qualsiasi momento, con notifica agli utenti registrati.</p>
               </div>
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">2. Requisiti di Idoneità</h4>
-                <p>Il servizio è riservato esclusivamente a persone maggiorenni (18+ anni). Registrandoti, dichiari di avere l'età legale per stipulare contratti. Ti consigliamo di consultare un medico prima di iniziare qualsiasi programma di esercizi. Wave Studio non è responsabile per eventuali condizioni mediche preesistenti non comunicate.</p>
+                <p>Il servizio è riservato esclusivamente a persone maggiorenni (18+ anni). Registrandoti, dichiari di avere l'età legale per stipulare contratti. Ti consigliamo di consultare un medico prima di iniziare qualsiasi programma di esercizi. Studio Osteopatia non è responsabile per eventuali condizioni mediche preesistenti non comunicate.</p>
               </div>
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">3. Prenotazioni e Cancellazioni</h4>
-                <p>Le prenotazioni delle lezioni possono essere effettuate tramite l'app o il sito web. Le cancellazioni devono essere comunicate almeno 24 ore prima dell'inizio della lezione per ottenere il rimborso completo o il credito. Le cancellazioni tardive (meno di 24 ore) comportano la perdita del credito della lezione. La mancata presentazione senza preavviso comporta l'addebito dell'intero costo della lezione.</p>
+                <p>Le prenotazioni delle sedute possono essere effettuate tramite l'app o il sito web. Le cancellazioni devono essere comunicate almeno 24 ore prima dell'inizio della seduta per ottenere il rimborso completo o il credito. Le cancellazioni tardive (meno di 24 ore) comportano la perdita del credito della seduta. La mancata presentazione senza preavviso comporta l'addebito dell'intero costo della seduta.</p>
               </div>
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">4. Pagamenti e Rimborsi</h4>
-                <p>I pagamenti vengono elaborati in modo sicuro tramite i nostri partner di pagamento certificati. Gli abbonamenti si rinnovano automaticamente salvo disdetta. I pacchetti di lezioni hanno una validità di 3 mesi dalla data di acquisto. Non sono previsti rimborsi per lezioni già usufruite. In caso di problemi tecnici imputabili a Wave Studio, verrà riconosciuto un credito equivalente.</p>
+                <p>I pagamenti vengono elaborati in modo sicuro tramite i nostri partner di pagamento certificati. Gli abbonamenti si rinnovano automaticamente salvo disdetta. I pacchetti di sedute hanno una validità di 3 mesi dalla data di acquisto. Non sono previsti rimborsi per sedute già usufruite. In caso di problemi tecnici imputabili a Studio Osteopatia, verrà riconosciuto un credito equivalente.</p>
               </div>
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">5. Comportamento in Studio</h4>
-                <p>Gli utenti si impegnano a mantenere un comportamento rispettoso verso gli istruttori e gli altri partecipanti. È richiesto l'utilizzo di abbigliamento sportivo adeguato e calzini antiscivolo. È vietato l'uso di telefoni cellulari durante le lezioni. Wave Studio si riserva il diritto di allontanare utenti che non rispettino queste regole.</p>
+                <p>Gli utenti si impegnano a mantenere un comportamento rispettoso verso gli personale dello studio e gli altri partecipanti. È richiesto l'utilizzo di abbigliamento sportivo adeguato e calzini antiscivolo. È vietato l'uso di telefoni cellulari durante le sedute. Studio Osteopatia si riserva il diritto di allontanare utenti che non rispettino queste regole.</p>
               </div>
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">6. Responsabilità e Limitazioni</h4>
-                <p>Wave Studio non è responsabile per oggetti personali lasciati incustoditi nello studio. La partecipazione alle lezioni avviene sotto la propria responsabilità. Si consiglia di informare l'istruttore di eventuali infortuni o limitazioni fisiche prima dell'inizio della lezione. Wave Studio è assicurato per responsabilità civile verso terzi.</p>
+                <p>Studio Osteopatia non è responsabile per oggetti personali lasciati incustoditi nello studio. La partecipazione alle sedute avviene sotto la propria responsabilità. Si consiglia di informare l'osteopata di eventuali infortuni o limitazioni fisiche prima dell'inizio della seduta. Studio Osteopatia è assicurato per responsabilità civile verso terzi.</p>
               </div>
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">7. Proprietà Intellettuale</h4>
-                <p>Tutti i contenuti presenti sul sito e sull'app (loghi, testi, immagini, video) sono di proprietà esclusiva di Wave Studio Pilates. È vietata la riproduzione, distribuzione o utilizzo non autorizzato di tali contenuti. Le registrazioni video o audio delle lezioni non sono consentite senza esplicita autorizzazione scritta.</p>
+                <p>Tutti i contenuti presenti sul sito e sull'app (loghi, testi, immagini, video) sono di proprietà esclusiva di Studio Osteopatia Giulia Patti. È vietata la riproduzione, distribuzione o utilizzo non autorizzato di tali contenuti. Le registrazioni video o audio delle sedute non sono consentite senza esplicita autorizzazione scritta.</p>
               </div>
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">8. Modifiche al Servizio</h4>
-                <p>Wave Studio si riserva il diritto di modificare orari, istruttori e tipologie di lezioni. In caso di cancellazione di una lezione da parte dello studio, gli utenti prenotati riceveranno notifica immediata e credito per una lezione sostitutiva. Gli orari di apertura possono variare durante le festività.</p>
+                <p>Studio Osteopatia si riserva il diritto di modificare orari, personale dello studio e tipologie di sedute. In caso di cancellazione di una seduta da parte dello studio, gli utenti prenotati riceveranno notifica immediata e credito per una seduta sostitutiva. Gli orari di apertura possono variare durante le festività.</p>
               </div>
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">9. Foro Competente</h4>
@@ -102,7 +102,7 @@ const TermsAndPrivacySection: React.FC<TermsAndPrivacySectionProps> = ({ accetto
             <div className="text-xs text-[#4B5563] space-y-4 leading-relaxed">
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">1. Titolare del Trattamento</h4>
-                <p>Il Titolare del trattamento dei dati personali è Wave Studio Pilates, con sede in Via Etnea 123, 95125 Catania (CT), Italia. Per qualsiasi richiesta relativa al trattamento dei dati personali, puoi contattarci all'indirizzo email: privacy@wavestudiopilates.it</p>
+                <p>Il Titolare del trattamento dei dati personali è Studio Osteopatia Giulia Patti, con sede in Via Etnea 123, 95125 Catania (CT), Italia. Per qualsiasi richiesta relativa al trattamento dei dati personali, puoi contattarci all'indirizzo email: privacy@osteopatiagiuliapatti.it</p>
               </div>
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">2. Dati Personali Raccolti</h4>
@@ -110,7 +110,7 @@ const TermsAndPrivacySection: React.FC<TermsAndPrivacySectionProps> = ({ accetto
                 <ul className="list-disc ml-4 mt-2 space-y-1">
                   <li><strong>Dati identificativi:</strong> nome, cognome, indirizzo email, numero di telefono</li>
                   <li><strong>Dati di accesso:</strong> credenziali di autenticazione (email e password criptata)</li>
-                  <li><strong>Dati di utilizzo:</strong> storico prenotazioni, preferenze di lezione, frequenza di partecipazione</li>
+                  <li><strong>Dati di utilizzo:</strong> storico prenotazioni, preferenze di seduta, frequenza di partecipazione</li>
                   <li><strong>Dati tecnici:</strong> indirizzo IP, tipo di dispositivo, browser utilizzato, dati di navigazione</li>
                   <li><strong>Dati di pagamento:</strong> gestiti in modo sicuro tramite provider certificati PCI-DSS (non conserviamo dati delle carte di credito)</li>
                 </ul>
@@ -120,7 +120,7 @@ const TermsAndPrivacySection: React.FC<TermsAndPrivacySectionProps> = ({ accetto
                 <p>I tuoi dati personali sono trattati per le seguenti finalità:</p>
                 <ul className="list-disc ml-4 mt-2 space-y-1">
                   <li>Gestione dell'account utente e autenticazione</li>
-                  <li>Elaborazione delle prenotazioni e gestione delle lezioni</li>
+                  <li>Elaborazione delle prenotazioni e gestione delle sedute</li>
                   <li>Comunicazioni di servizio (conferme prenotazione, modifiche orari, cancellazioni)</li>
                   <li>Invio di newsletter e comunicazioni promozionali (solo con consenso esplicito)</li>
                   <li>Miglioramento dei nostri servizi e dell'esperienza utente</li>
@@ -156,7 +156,7 @@ const TermsAndPrivacySection: React.FC<TermsAndPrivacySectionProps> = ({ accetto
                   <li><strong>Opposizione:</strong> opporti al trattamento per marketing diretto</li>
                   <li><strong>Revoca del consenso:</strong> revocare in qualsiasi momento il consenso prestato</li>
                 </ul>
-                <p className="mt-2">Per esercitare questi diritti, contatta: privacy@wavestudiopilates.it</p>
+                <p className="mt-2">Per esercitare questi diritti, contatta: privacy@osteopatiagiuliapatti.it</p>
               </div>
               <div>
                 <h4 className="font-bold text-[#2E5C8A] mb-2">8. Sicurezza dei Dati</h4>
@@ -190,7 +190,7 @@ const TermsAndPrivacySection: React.FC<TermsAndPrivacySectionProps> = ({ accetto
           className="mt-0.5 w-5 h-5 rounded border-[#E5E5E5] text-[#4A90E2] focus:ring-[#4A90E2] cursor-pointer"
         />
         <label htmlFor="accetto" className="text-xs text-[#4B5563] leading-relaxed cursor-pointer">
-          Ho letto e accetto i <span className="text-[#4A90E2] font-bold">Termini e Condizioni</span> e l'<span className="text-[#4A90E2] font-bold">Informativa sulla Privacy</span> di Wave Studio Pilates. Dichiaro di essere maggiorenne e di aver compreso le modalità di trattamento dei miei dati personali.
+          Ho letto e accetto i <span className="text-[#4A90E2] font-bold">Termini e Condizioni</span> e l'<span className="text-[#4A90E2] font-bold">Informativa sulla Privacy</span> di Studio Osteopatia Giulia Patti. Dichiaro di essere maggiorenne e di aver compreso le modalità di trattamento dei miei dati personali.
         </label>
       </div>
     </div>
@@ -486,7 +486,7 @@ export const Auth: React.FC<AuthProps> = ({ type, onSwitch, onBack, onSuccess })
             <div className="w-12 h-12 flex items-center justify-center bg-white rounded-xl shadow-sm text-[#4A90E2] group-hover:scale-110 transition-transform">
               <Shield size={24} />
             </div>
-            <span className="text-2xl font-black tracking-tighter uppercase text-[#2E5C8A]">Wave Studio</span>
+            <span className="text-2xl font-black tracking-tighter uppercase text-[#2E5C8A]">Studio Osteopatia</span>
           </div>
 
           <h2 className="text-4xl xl:text-5xl font-extrabold text-[#2E5C8A] leading-tight mb-6 tracking-tighter">
@@ -525,7 +525,7 @@ export const Auth: React.FC<AuthProps> = ({ type, onSwitch, onBack, onSuccess })
         <div className="lg:hidden p-6 flex items-center justify-between border-b border-[#F5F5F5]">
           <div className="flex items-center gap-2" onClick={onBack}>
             <Shield size={24} className="text-[#4A90E2]" />
-            <span className="text-lg font-black tracking-tighter uppercase">Wave Studio</span>
+            <span className="text-lg font-black tracking-tighter uppercase">Studio Osteopatia</span>
           </div>
           <button onClick={onBack} className="p-2 text-[#9CA3AF] hover:text-[#4A90E2]">
             <ArrowLeft size={20} />
@@ -548,7 +548,7 @@ export const Auth: React.FC<AuthProps> = ({ type, onSwitch, onBack, onSuccess })
                 {type === 'signup' ? 'Crea il Tuo Account' : 'Bentornato!'}
               </h1>
               <p className="text-[#9CA3AF] text-sm md:text-base">
-                {type === 'signup' ? 'Unisciti a Wave Studio e inizia il tuo percorso' : 'Accedi al tuo account Wave Studio'}
+                {type === 'signup' ? 'Unisciti a Studio Osteopatia e inizia il tuo percorso' : 'Accedi al tuo account Studio Osteopatia'}
               </p>
             </div>
 

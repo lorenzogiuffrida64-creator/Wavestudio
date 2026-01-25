@@ -16,13 +16,13 @@ export const AboutGiulia: React.FC = () => {
           <p className="text-lg md:text-xl text-[#496da1] font-semibold mb-8 tracking-wide">Bsc. Ost. Hons.</p>
           <div className="space-y-6 text-lg text-white/70 leading-relaxed max-w-xl">
             <p>
-              Con una laurea in Osteopatia conseguita con Honours, Giulia porta a Wave Studio un approccio fondato sulla <span className="text-white font-bold">scienza clinica</span> e sulla <span className="text-white font-bold">ricerca accademica</span>. Ogni movimento è calibrato, ogni esercizio ha un fondamento anatomico preciso.
+              Con una laurea in Osteopatia conseguita con Honours, porto nel mio studio un approccio fondato sulla <span className="text-white font-bold">scienza clinica</span> e sulla <span className="text-white font-bold">ricerca accademica</span>. Ogni trattamento è calibrato, ogni manipolazione ha un fondamento anatomico preciso.
             </p>
             <p>
-              La sua formazione sanitaria garantisce che ogni sessione sia progettata con la massima attenzione alla <span className="text-white font-bold">sicurezza</span> e al rispetto dei limiti del corpo. Qui non si improvvisa: si applica metodo.
+              La mia formazione sanitaria garantisce che ogni seduta sia progettata con la massima attenzione alla <span className="text-white font-bold">sicurezza</span> e al rispetto dei limiti del corpo. Qui non si improvvisa: si applica metodo.
             </p>
             <p className="important-word highlight-wave text-3xl md:text-4xl mt-6 leading-tight">
-              "Il mio compito è guidarti con competenza e cura, perché il tuo corpo merita un approccio clinico, non approssimativo."
+              "Il corpo ha una capacit&agrave; innata di guarire. Il mio compito &egrave; facilitare questo processo con competenza e dedizione."
             </p>
           </div>
 
@@ -33,7 +33,7 @@ export const AboutGiulia: React.FC = () => {
             </div>
             <div className="border-l-2 border-[#496da1] pl-4">
               <p className="text-sm uppercase font-bold opacity-50 mb-1">Specializzazione</p>
-              <p className="font-bold">Pilates Clinico</p>
+              <p className="font-bold">Osteopatia Strutturale</p>
             </div>
           </div>
         </div>

@@ -92,7 +92,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
             <Shield size={24} />
           </div>
           <div className="flex flex-col">
-            <span className="font-black uppercase tracking-tighter text-white text-lg leading-none">Wave Admin</span>
+            <span className="font-black uppercase tracking-tighter text-white text-lg leading-none">Gestione Studio</span>
             <span className="text-[10px] font-bold text-[#4A90E2] uppercase tracking-[0.2em] mt-1">Studio CRM</span>
           </div>
         </div>
@@ -148,7 +148,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
               <div className="w-16 h-16 bg-[#4A90E2] rounded-2xl flex items-center justify-center text-white shadow-2xl mb-4">
                 <Shield size={32} />
               </div>
-              <h2 className="font-black uppercase tracking-tighter text-2xl italic leading-none">Wave Admin</h2>
+              <h2 className="font-black uppercase tracking-tighter text-2xl italic leading-none">Gestione Studio</h2>
               <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#4A90E2] mt-2">Pannello Gestione</p>
             </div>
 
@@ -1807,7 +1807,7 @@ const AdminSettings: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-2">
             <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Nome Studio</label>
-            <input type="text" defaultValue="Wave Studio Pilates" className="w-full h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-[#4A90E2]" />
+            <input type="text" defaultValue="Studio Osteopatia Giulia Patti" className="w-full h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-[#4A90E2]" />
           </div>
           <div className="space-y-2">
             <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Email</label>

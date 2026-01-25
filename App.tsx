@@ -5,7 +5,6 @@ import { Hero } from './components/Hero';
 import { ValueProposition } from './components/ValueProposition';
 import { AboutGiulia } from './components/AboutGiulia';
 import { Services } from './components/Services';
-import { Instructors } from './components/Instructors';
 import { Testimonials } from './components/Testimonials';
 import { Location } from './components/Location';
 import { Footer } from './components/Footer';
@@ -160,7 +159,6 @@ const App: React.FC = () => {
             <ValueProposition />
             <Services onCoursesClick={() => setView('courses')} />
             <AboutGiulia />
-            <Instructors onBookClick={() => setView('signup')} />
             <Testimonials />
             <Location />
           </>

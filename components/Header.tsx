@@ -34,8 +34,8 @@ export const Header: React.FC<HeaderProps> = ({
   }, [isMenuOpen]);
 
   const navLinks = [
-    { label: 'i nostri corsi', href: '#courses', action: onCoursesClick, isHomePage: false },
-    { label: 'mario catania', href: '#about', action: onHomeClick, isHomePage: true },
+    { label: 'i nostri servizi', href: '#services', action: onCoursesClick, isHomePage: false },
+    { label: 'chi sono', href: '#about', action: onHomeClick, isHomePage: true },
     { label: 'recensioni', href: '#testimonials', action: onHomeClick, isHomePage: true },
     { label: 'dove siamo', href: '#location', action: onHomeClick, isHomePage: true },
   ];
@@ -81,12 +81,14 @@ export const Header: React.FC<HeaderProps> = ({
     >
       <div className="flex items-center gap-4 cursor-pointer z-[70]" onClick={handleLogoClick}>
         <div className="w-10 h-10 flex items-center justify-center">
-          <svg viewBox="0 0 100 100" className="w-full h-full text-[#496da1] fill-current">
-            <path d="M10,50 Q25,20 40,50 T70,50 T100,50 L100,100 L0,100 Z opacity-20" />
-            <path d="M0,50 Q15,20 30,50 T60,50 T90,50" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
+          <svg viewBox="0 0 100 100" className="w-full h-full text-[#496da1]">
+            <ellipse cx="50" cy="20" rx="12" ry="14" fill="currentColor" opacity="0.9"/>
+            <path d="M50,34 Q45,50 48,70 Q50,85 50,95" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round"/>
+            <path d="M35,45 Q42,50 50,48 Q58,50 65,45" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
+            <path d="M38,60 Q44,63 50,62 Q56,63 62,60" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
           </svg>
         </div>
-        <span className="text-xl font-black tracking-tighter uppercase">Wave Studio</span>
+        <span className="text-xl font-black tracking-tighter uppercase">Studio Osteopatia</span>
       </div>
 
       <nav className="hidden xl:flex items-center gap-8">
@@ -159,8 +161,9 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex flex-col h-full pt-32 px-8 pb-12">
           {/* Decorative background logo */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02] pointer-events-none scale-150">
-            <svg viewBox="0 0 100 100" className="w-96 h-96 text-black fill-current">
-              <path d="M0,50 Q15,20 30,50 T60,50 T90,50" fill="none" stroke="currentColor" strokeWidth="8" />
+            <svg viewBox="0 0 100 100" className="w-96 h-96 text-black">
+              <ellipse cx="50" cy="20" rx="12" ry="14" fill="currentColor"/>
+              <path d="M50,34 Q45,50 48,70 Q50,85 50,95" fill="none" stroke="currentColor" strokeWidth="6"/>
             </svg>
           </div>
 
@@ -217,7 +220,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
             
             <p className="text-center text-[10px] font-black uppercase tracking-[0.4em] text-black/10 pt-4">
-              Wave Studio • Catania
+              Studio Osteopatia • Catania
             </p>
           </div>
         </div>
