@@ -1544,7 +1544,7 @@ const AdminWaitlist: React.FC = () => {
     }
     acc[key].entries.push(entry);
     return acc;
-  }, {} as Record<string, { slot: typeof entry.schedule_slots; date: string; entries: WaitlistEntry[] }>);
+  }, {} as Record<string, { slot: WaitlistEntry['schedule_slots']; date: string; entries: WaitlistEntry[] }>);
 
   if (loading) {
     return (
@@ -1629,7 +1629,7 @@ const AdminWaitlist: React.FC = () => {
         </div>
       ) : (
         <div className="space-y-6">
-          {Object.entries(groupedEntries).map(([key, group]) => (
+          {Object.entries(groupedEntries).map(([key, group]: [string, { slot: WaitlistEntry['schedule_slots']; date: string; entries: WaitlistEntry[] }]) => (
             <div key={key} className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
               {/* Slot Header */}
               <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-3">
