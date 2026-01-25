@@ -1,47 +1,48 @@
 
 import React from 'react';
 
-export const AboutMario: React.FC = () => {
+export const AboutGiulia: React.FC = () => {
   return (
     <section id="about" className="py-24 px-6 md:px-12 bg-black text-white overflow-hidden relative">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-[#496da1]/10 skew-x-12 transform translate-x-20"></div>
-      
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="relative z-10">
           <h2 className="text-xs font-black uppercase tracking-[0.3em] mb-6 text-[#496da1]">La Mente dietro lo Studio</h2>
-          <h3 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter">
-            Mario <span className="important-word highlight-wave">Catania</span>
+          <h3 className="text-5xl md:text-7xl font-extrabold mb-2 tracking-tighter">
+            Giulia <span className="important-word highlight-wave">Patti</span>
           </h3>
+          <p className="text-lg md:text-xl text-[#496da1] font-semibold mb-8 tracking-wide">Bsc. Ost. Hons.</p>
           <div className="space-y-6 text-lg text-white/70 leading-relaxed max-w-xl">
             <p>
-              Formatosi nelle migliori accademie internazionali, Mario porta a Catania un approccio al Pilates che fonde <span className="text-white font-bold">scienza del movimento</span> e <span className="text-white font-bold">benessere olistico</span>.
+              Con una laurea in Osteopatia conseguita con Honours, Giulia porta a Wave Studio un approccio fondato sulla <span className="text-white font-bold">scienza clinica</span> e sulla <span className="text-white font-bold">ricerca accademica</span>. Ogni movimento è calibrato, ogni esercizio ha un fondamento anatomico preciso.
             </p>
             <p>
-              Con oltre 15 anni di esperienza nel settore del fitness d'elite, ha fondato Wave Studio con l'obiettivo di creare un ambiente dove l'eccellenza tecnica incontra il comfort di casa.
+              La sua formazione sanitaria garantisce che ogni sessione sia progettata con la massima attenzione alla <span className="text-white font-bold">sicurezza</span> e al rispetto dei limiti del corpo. Qui non si improvvisa: si applica metodo.
             </p>
             <p className="important-word highlight-wave text-3xl md:text-4xl mt-6 leading-tight">
-              "Il mio obiettivo non è solo farti sudare, ma farti scoprire quanto il tuo corpo sia capace di prodezze quando guidato con cura."
+              "Il mio compito è guidarti con competenza e cura, perché il tuo corpo merita un approccio clinico, non approssimativo."
             </p>
           </div>
-          
+
           <div className="mt-12 flex gap-8">
             <div className="border-l-2 border-[#496da1] pl-4">
-              <p className="text-sm uppercase font-bold opacity-50 mb-1">Certificazioni</p>
-              <p className="font-bold">Master Trainer Reformer</p>
+              <p className="text-sm uppercase font-bold opacity-50 mb-1">Formazione</p>
+              <p className="font-bold">Bsc. Ost. Hons.</p>
             </div>
             <div className="border-l-2 border-[#496da1] pl-4">
-              <p className="text-sm uppercase font-bold opacity-50 mb-1">Formazione</p>
-              <p className="font-bold">Osteopatia & Posturologia</p>
+              <p className="text-sm uppercase font-bold opacity-50 mb-1">Specializzazione</p>
+              <p className="font-bold">Pilates Clinico</p>
             </div>
           </div>
         </div>
-        
+
         <div className="relative">
           <div className="rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl relative z-10">
-            <img 
-              src="https://images.unsplash.com/photo-1548690312-e3b507d17a12?auto=format&fit=crop&q=80&w=800" 
-              alt="Mario Catania" 
+            <img
+              src="https://images.unsplash.com/photo-1548690312-e3b507d17a12?auto=format&fit=crop&q=80&w=800"
+              alt="Giulia Patti"
               className="w-full h-full object-cover"
             />
           </div>

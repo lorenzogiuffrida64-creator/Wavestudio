@@ -88,9 +88,9 @@ Insert some test classes into your `classes` table:
 ```sql
 INSERT INTO classes (class_name, description, instructor, day_of_week, start_time, duration_minutes, max_capacity, price_cents, is_active)
 VALUES 
-  ('Pilates Matwork', 'Il corso base perfetto per chi inizia', 'Mario Catania', 1, '10:00:00', 50, 15, 4500, true),
+  ('Pilates Matwork', 'Il corso base perfetto per chi inizia', 'Giulia Patti', 1, '10:00:00', 50, 15, 4500, true),
   ('Pilates Reformer', 'Allenamento completo con Reformer', 'Laura Rossi', 3, '18:00:00', 55, 12, 5000, true),
-  ('Pilates Advanced', 'Per chi ha già una solida base', 'Mario Catania', 5, '19:00:00', 60, 10, 5500, true);
+  ('Pilates Advanced', 'Per chi ha già una solida base', 'Giulia Patti', 5, '19:00:00', 60, 10, 5500, true);
 ```
 
 ### 6. Run the Application

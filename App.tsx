@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ValueProposition } from './components/ValueProposition';
-import { AboutMario } from './components/AboutMario';
+import { AboutGiulia } from './components/AboutGiulia';
 import { Services } from './components/Services';
 import { Instructors } from './components/Instructors';
 import { Testimonials } from './components/Testimonials';
@@ -159,7 +159,7 @@ const App: React.FC = () => {
             />
             <ValueProposition />
             <Services onCoursesClick={() => setView('courses')} />
-            <AboutMario />
+            <AboutGiulia />
             <Instructors onBookClick={() => setView('signup')} />
             <Testimonials />
             <Location />

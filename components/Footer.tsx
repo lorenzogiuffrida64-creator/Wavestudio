@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({ onCoursesClick, onBookClick }) =
             <svg viewBox="0 0 200 200" className="w-64 h-64 animate-spin-slow">
               <path id="circlePath" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0" fill="transparent" />
               <text className="text-[14px] uppercase font-bold tracking-[0.2em] fill-white">
-                <textPath href="#circlePath">Wave Studio • Pilates • Catania • Mario Catania • </textPath>
+                <textPath href="#circlePath">Wave Studio • Pilates • Catania • Giulia Patti • </textPath>
               </text>
             </svg>
           </div>
