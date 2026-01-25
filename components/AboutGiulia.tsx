@@ -16,11 +16,7 @@ export const AboutGiulia: React.FC = () => {
           <p className="text-lg md:text-xl text-[#496da1] font-semibold mb-8 tracking-wide">Bsc. Ost. Hons.</p>
           <div className="space-y-6 text-lg text-white/70 leading-relaxed max-w-xl">
             <p>
-<<<<<<< HEAD:components/AboutGiulia.tsx
               Con una laurea in Osteopatia conseguita con Honours, Giulia porta a Wave Studio un approccio fondato sulla <span className="text-white font-bold">scienza clinica</span> e sulla <span className="text-white font-bold">ricerca accademica</span>. Ogni movimento è calibrato, ogni esercizio ha un fondamento anatomico preciso.
-=======
-              Formatosi nel settore del fitness, Mario porta a Catania un approccio al Pilates che fonde <span className="text-white font-bold">scienza del movimento</span> e <span className="text-white font-bold">benessere olistico</span>.
->>>>>>> a678931 (alright):components/AboutMario.tsx
             </p>
             <p>
               La sua formazione sanitaria garantisce che ogni sessione sia progettata con la massima attenzione alla <span className="text-white font-bold">sicurezza</span> e al rispetto dei limiti del corpo. Qui non si improvvisa: si applica metodo.
@@ -29,7 +25,6 @@ export const AboutGiulia: React.FC = () => {
               "Il mio compito è guidarti con competenza e cura, perché il tuo corpo merita un approccio clinico, non approssimativo."
             </p>
           </div>
-<<<<<<< HEAD:components/AboutGiulia.tsx
 
           <div className="mt-12 flex gap-8">
             <div className="border-l-2 border-[#496da1] pl-4">
@@ -41,9 +36,6 @@ export const AboutGiulia: React.FC = () => {
               <p className="font-bold">Pilates Clinico</p>
             </div>
           </div>
-=======
-        
->>>>>>> a678931 (alright):components/AboutMario.tsx
         </div>
 
         <div className="relative">
