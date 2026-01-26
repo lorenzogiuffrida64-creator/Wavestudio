@@ -92,8 +92,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
             <Shield size={24} />
           </div>
           <div className="flex flex-col">
-            <span className="font-black uppercase tracking-tighter text-white text-lg leading-none">Gestione Studio</span>
-            <span className="text-[10px] font-bold text-[#4A90E2] uppercase tracking-[0.2em] mt-1">Studio CRM</span>
+            <span className="font-black uppercase tracking-tighter text-white text-lg leading-none">Giulia Patti</span>
+            <span className="text-[10px] font-bold text-[#4A90E2] uppercase tracking-[0.2em] mt-1">Osteopatia</span>
           </div>
         </div>
 
@@ -120,8 +120,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
 
         <div className="p-6 mt-auto border-t border-white/5">
           <div className="bg-white/5 p-4 rounded-2xl mb-4">
-            <p className="text-[10px] font-black uppercase text-white/30 tracking-widest mb-2">Admin Account</p>
-            <p className="text-sm font-bold text-white">Admin Wave</p>
+            <p className="text-[10px] font-black uppercase text-white/30 tracking-widest mb-2">Account Admin</p>
+            <p className="text-sm font-bold text-white">Giulia Patti</p>
           </div>
           <button 
             onClick={onLogout}
@@ -148,8 +148,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
               <div className="w-16 h-16 bg-[#4A90E2] rounded-2xl flex items-center justify-center text-white shadow-2xl mb-4">
                 <Shield size={32} />
               </div>
-              <h2 className="font-black uppercase tracking-tighter text-2xl italic leading-none">Gestione Studio</h2>
-              <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#4A90E2] mt-2">Pannello Gestione</p>
+              <h2 className="font-black uppercase tracking-tighter text-2xl italic leading-none">Giulia Patti</h2>
+              <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#4A90E2] mt-2">Gestione Studio</p>
             </div>
 
             <nav className="flex-1 overflow-y-auto py-6 px-4 space-y-1">
@@ -206,10 +206,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
             </button>
             <div className="hidden sm:flex items-center gap-3 pl-6 border-l border-slate-200">
               <div className="text-right">
-                <p className="text-sm font-bold text-slate-900 leading-none">Admin Studio</p>
-                <p className="text-[10px] text-slate-400 uppercase font-bold tracking-widest mt-1">Super Admin</p>
+                <p className="text-sm font-bold text-slate-900 leading-none">Giulia Patti</p>
+                <p className="text-[10px] text-slate-400 uppercase font-bold tracking-widest mt-1">Amministratore</p>
               </div>
-              <div className="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white font-black text-sm">A</div>
+              <div className="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white font-black text-sm">G</div>
             </div>
           </div>
         </header>
@@ -440,7 +440,7 @@ const AdminHome: React.FC<{ onNavigate: (id: AdminView) => void }> = ({ onNaviga
                         <div>
                           <h4 className="font-black text-base text-slate-900 leading-none mb-1">{profile?.full_name || 'Cliente'}</h4>
                           <div className="flex items-center gap-2 flex-wrap">
-                            <span className="text-xs text-slate-500">{slot?.class_type || 'Pilates'}</span>
+                            <span className="text-xs text-slate-500">{slot?.class_type || 'Trattamento Osteopatico'}</span>
                             {profile?.phone && (
                               <span className="text-xs text-slate-400 flex items-center gap-1">
                                 <Phone size={12} /> {profile.phone}
@@ -675,7 +675,7 @@ const AdminAppointments: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
           <h1 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tighter uppercase italic">Gestione Appuntamenti</h1>
-          <p className="text-sm text-slate-500">Gestisci e monitora tutte le sessioni dello studio.</p>
+          <p className="text-sm text-slate-500">Gestisci e monitora tutti i trattamenti dello studio.</p>
         </div>
         <div className="flex gap-2">
           <button
@@ -756,7 +756,7 @@ const AdminAppointments: React.FC = () => {
                         </div>
                         <div>
                           <h4 className="font-black text-slate-900 leading-tight">{profile?.full_name || 'Cliente'}</h4>
-                          <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">{slot?.class_type || 'Pilates'}</p>
+                          <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">{slot?.class_type || 'Trattamento'}</p>
                           {profile?.phone && (
                             <p className="text-xs text-slate-500 flex items-center gap-1 mt-1">
                               <Phone size={12} /> {profile.phone}
@@ -842,8 +842,8 @@ const AdminAppointments: React.FC = () => {
                           <p className="text-[10px] text-slate-400">{profile?.email || ''}</p>
                         </td>
                         <td className="px-8 py-5">
-                          <p className="text-sm font-bold text-[#4A90E2]">{slot?.class_type || 'Pilates'}</p>
-                          <p className="text-xs text-slate-400">Con {slot?.instructor?.name || 'Istruttore'}</p>
+                          <p className="text-sm font-bold text-[#4A90E2]">{slot?.class_type || 'Trattamento Osteopatico'}</p>
+                          <p className="text-xs text-slate-400">Con {slot?.instructor?.name || 'Dott.ssa Patti'}</p>
                         </td>
                         <td className="px-8 py-5">
                           <span className={`text-[10px] font-black uppercase tracking-widest ${status.bg} ${status.text} px-3 py-1 rounded-full`}>
@@ -1092,8 +1092,8 @@ const AdminClients: React.FC = () => {
       {/* MAIN CONTENT */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
-          <h1 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tighter uppercase italic">Clienti Studio</h1>
-          <p className="text-sm text-slate-500">Gestisci i profili e lo storico di tutti i soci.</p>
+          <h1 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tighter uppercase italic">Pazienti</h1>
+          <p className="text-sm text-slate-500">Gestisci i profili e lo storico di tutti i pazienti.</p>
         </div>
         <button
           onClick={loadClients}
@@ -1393,9 +1393,9 @@ const AdminCalendar: React.FC = () => {
                               key={booking.id}
                               className={`${colors[idx % colors.length]} text-white p-3 rounded-xl shadow-lg cursor-pointer active:scale-[0.99] transition-all`}
                             >
-                              <p className="text-xs font-black uppercase tracking-widest">{profile?.full_name || 'Cliente'}</p>
+                              <p className="text-xs font-black uppercase tracking-widest">{profile?.full_name || 'Paziente'}</p>
                               <p className="text-[10px] opacity-80">
-                                {slot?.class_type || 'Pilates'} • {slot?.start_time?.substring(0, 5)}
+                                {slot?.class_type || 'Trattamento'} • {slot?.start_time?.substring(0, 5)}
                                 {slot?.instructor?.name && ` • ${slot.instructor.name}`}
                               </p>
                               {profile?.phone && (
@@ -1560,7 +1560,7 @@ const AdminWaitlist: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tighter italic">Liste d'Attesa</h1>
-          <p className="text-sm text-slate-500">Gestisci le liste d'attesa per tutte le lezioni</p>
+          <p className="text-sm text-slate-500">Gestisci le liste d'attesa per tutti i trattamenti</p>
         </div>
         <div className="flex items-center gap-3">
           <button
@@ -1638,7 +1638,7 @@ const AdminWaitlist: React.FC = () => {
                     <Calendar size={20} className="text-[#4A90E2]" />
                   </div>
                   <div>
-                    <h3 className="font-black text-slate-900">{group.slot?.class_type || 'Pilates'}</h3>
+                    <h3 className="font-black text-slate-900">{group.slot?.class_type || 'Trattamento Osteopatico'}</h3>
                     <div className="flex items-center gap-3 text-sm text-slate-500">
                       <span className="capitalize">{formatDate(group.date)}</span>
                       {group.slot?.start_time && (
@@ -1767,7 +1767,7 @@ const AdminWaitlist: React.FC = () => {
         </div>
         <div className="bg-white p-5 rounded-2xl border border-slate-200 text-center">
           <p className="text-2xl font-black text-[#4A90E2]">{Object.keys(groupedEntries).length}</p>
-          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Lezioni con Lista</p>
+          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Sedute con Lista</p>
         </div>
       </div>
     </div>
@@ -1811,7 +1811,7 @@ const AdminSettings: React.FC = () => {
           </div>
           <div className="space-y-2">
             <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Email</label>
-            <input type="text" defaultValue="wavecatania@gmail.com" className="w-full h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-[#4A90E2]" />
+            <input type="text" defaultValue="info@giuliapatti.it" className="w-full h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-[#4A90E2]" />
           </div>
           <div className="space-y-2">
             <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Valuta</label>
@@ -1832,7 +1832,7 @@ const AdminSettings: React.FC = () => {
 
       <div className="bg-white rounded-[2rem] border border-slate-200 p-8 shadow-sm space-y-8">
         <div className="flex items-center justify-between">
-          <h3 className="text-xl font-black italic uppercase">Istruttori</h3>
+          <h3 className="text-xl font-black italic uppercase">Osteopati</h3>
           <button
             onClick={loadInstructors}
             disabled={loading}
@@ -1885,7 +1885,7 @@ const AdminSettings: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="text-center p-4 bg-slate-50 rounded-2xl">
             <p className="text-2xl font-black text-[#4A90E2]">{instructors.length}</p>
-            <p className="text-[10px] font-bold text-slate-400 uppercase">Istruttori</p>
+            <p className="text-[10px] font-bold text-slate-400 uppercase">Osteopati</p>
           </div>
           <div className="text-center p-4 bg-slate-50 rounded-2xl">
             <p className="text-2xl font-black text-green-600">{instructors.filter(i => i.is_active).length}</p>
@@ -1906,12 +1906,12 @@ const AddAppointmentWizard: React.FC<{ onCancel: () => void }> = ({ onCancel }) 
   const [formData, setFormData] = useState({
     clientId: '',
     clientName: '',
-    service: 'Pilates',
+    service: 'Trattamento Osteopatico',
     instructorId: '',
     instructorName: '',
     date: '',
     time: '',
-    price: '25.00',
+    price: '60.00',
     paid: false,
     sendEmail: true
   });
@@ -2034,23 +2034,24 @@ const AddAppointmentWizard: React.FC<{ onCancel: () => void }> = ({ onCancel }) 
         {step === 2 && (
           <div className="space-y-8 flex-1">
             <div className="text-center md:text-left">
-              <h3 className="text-2xl font-black text-slate-900 italic uppercase">Dettagli Servizio</h3>
-              <p className="text-slate-500 text-sm mt-1">Scegli il tipo di sessione e l'istruttore.</p>
+              <h3 className="text-2xl font-black text-slate-900 italic uppercase">Dettagli Trattamento</h3>
+              <p className="text-slate-500 text-sm mt-1">Scegli il tipo di trattamento e l'osteopata.</p>
             </div>
             <div className="space-y-6">
               <div className="space-y-2">
-                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Tipo Servizio</label>
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Tipo Trattamento</label>
                 <select
                   value={formData.service}
                   onChange={(e) => setFormData({...formData, service: e.target.value})}
                   className="w-full h-14 px-5 bg-slate-50 border border-slate-200 rounded-2xl font-bold outline-none"
                 >
-                  <option value="Pilates">Pilates</option>
-                  <option value="PT">Personal Training</option>
+                  <option value="Trattamento Osteopatico">Trattamento Osteopatico</option>
+                  <option value="Prima Visita">Prima Visita Osteopatica</option>
+                  <option value="Controllo">Visita di Controllo</option>
                 </select>
               </div>
               <div className="space-y-2">
-                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Istruttore</label>
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Osteopata</label>
                 <select
                   value={formData.instructorId}
                   onChange={(e) => {
@@ -2097,7 +2098,7 @@ const AddAppointmentWizard: React.FC<{ onCancel: () => void }> = ({ onCancel }) 
           <div className="space-y-8 flex-1">
             <div className="text-center md:text-left">
               <h3 className="text-2xl font-black text-slate-900 italic uppercase">Data e Ora</h3>
-              <p className="text-slate-500 text-sm mt-1">Seleziona il momento della sessione.</p>
+              <p className="text-slate-500 text-sm mt-1">Seleziona il momento della visita.</p>
             </div>
             <div className="space-y-6">
               <div className="space-y-2">
@@ -2122,7 +2123,7 @@ const AddAppointmentWizard: React.FC<{ onCancel: () => void }> = ({ onCancel }) 
               {formData.instructorName && (
                 <div className="p-4 bg-green-50 border border-green-100 rounded-2xl flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                  <span className="text-xs font-bold text-green-700">Istruttore selezionato: {formData.instructorName}</span>
+                  <span className="text-xs font-bold text-green-700">Osteopata selezionato: {formData.instructorName}</span>
                 </div>
               )}
             </div>
@@ -2138,15 +2139,15 @@ const AddAppointmentWizard: React.FC<{ onCancel: () => void }> = ({ onCancel }) 
             <div className="bg-slate-50 p-6 rounded-[2rem] border border-slate-100 space-y-6">
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Cliente</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Paziente</p>
                   <p className="font-bold text-slate-900">{formData.clientName || 'Non selezionato'}</p>
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Servizio</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Trattamento</p>
                   <p className="font-bold text-slate-900">{formData.service}</p>
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Istruttore</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Osteopata</p>
                   <p className="font-bold text-slate-900">{formData.instructorName || 'Non selezionato'}</p>
                 </div>
                 <div>

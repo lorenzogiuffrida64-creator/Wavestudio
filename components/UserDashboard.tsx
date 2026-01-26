@@ -172,7 +172,7 @@ const MiniCalendar: React.FC<{ bookedDates: string[]; onBook: () => void }> = ({
           onClick={onBook}
           className="w-full h-12 bg-[#4A90E2] hover:bg-[#3A7BC8] text-white rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-colors shadow-lg shadow-[#4A90E2]/20"
         >
-          <Plus size={18} /> Prenota Seduta
+          <Plus size={18} /> Prenota Visita
         </button>
       </div>
     </div>
@@ -194,10 +194,10 @@ export const UserDashboard: React.FC<UserDashboardProps> = ({ user, onLogout }) 
 
   const menuItems = [
     { id: 'home', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'booking', label: 'Prenota', icon: Calendar },
-    { id: 'appointments', label: 'I Miei Appuntamenti', icon: Clock },
+    { id: 'booking', label: 'Prenota Visita', icon: Calendar },
+    { id: 'appointments', label: 'Le Mie Visite', icon: Clock },
     { id: 'waitlist', label: 'Lista d\'Attesa', icon: ListOrdered },
-    { id: 'instructors', label: 'Istruttori', icon: Users },
+    { id: 'instructors', label: 'L\'Osteopata', icon: Users },
     { id: 'notifications', label: 'Notifiche', icon: Bell },
     { id: 'settings', label: 'Impostazioni', icon: Settings },
   ];
@@ -215,7 +215,7 @@ export const UserDashboard: React.FC<UserDashboardProps> = ({ user, onLogout }) 
           <div className="w-10 h-10 bg-[#4A90E2] rounded-xl flex items-center justify-center text-white shadow-lg shadow-[#4A90E2]/20">
             <Shield size={24} />
           </div>
-          <span className="font-black uppercase tracking-tighter text-black text-xl">Studio Osteopatia</span>
+          <span className="font-black uppercase tracking-tighter text-black text-xl">Giulia Patti</span>
         </div>
 
         <nav className="flex-1 mt-4 px-4 space-y-1">
@@ -260,8 +260,8 @@ export const UserDashboard: React.FC<UserDashboardProps> = ({ user, onLogout }) 
               <div className="w-16 h-16 bg-[#4A90E2] rounded-2xl flex items-center justify-center text-white shadow-xl shadow-[#4A90E2]/20 mb-4 animate-bounce-slow">
                 <Shield size={32} />
               </div>
-              <h2 className="font-black uppercase tracking-tighter text-black text-xl italic leading-none">Studio Osteopatia</h2>
-              <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#4A90E2] mt-2">Pannello Socio</p>
+              <h2 className="font-black uppercase tracking-tighter text-black text-xl italic leading-none">Giulia Patti</h2>
+              <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#4A90E2] mt-2">Area Paziente</p>
             </div>
 
             {/* Mobile Sidebar Nav */}
@@ -436,13 +436,13 @@ const DashboardHome: React.FC<{ user: { name: string; id: string }; onBook: () =
 
   const getActivityText = (booking: Booking): string => {
     const date = new Date(booking.booking_date).toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit' });
-    const classType = booking.schedule_slots?.class_type || 'Pilates';
+    const classType = booking.schedule_slots?.class_type || 'Trattamento Osteopatico';
 
     if (booking.status === 'cancelled') {
       return `Hai cancellato: ${classType} del ${date}`;
     }
     if (booking.status === 'confirmed') {
-      return `Prenotazione confermata: ${classType} - ${date}`;
+      return `Visita confermata: ${classType} - ${date}`;
     }
     return `Nuova prenotazione: ${classType} - ${date}`;
   };
@@ -461,16 +461,16 @@ const DashboardHome: React.FC<{ user: { name: string; id: string }; onBook: () =
   };
 
   const statsDisplay = [
-    { label: 'Prossimi', value: loading ? '-' : String(stats?.upcoming || 0), icon: Calendar, color: '#4A90E2' },
-    { label: 'Completati', value: loading ? '-' : String(stats?.completed || 0), icon: CheckCircle2, color: '#10B981' },
-    { label: 'Istruttori', value: loading ? '-' : String(stats?.instructorCount || 0), icon: Users, color: '#F59E0B' },
+    { label: 'Prossime Visite', value: loading ? '-' : String(stats?.upcoming || 0), icon: Calendar, color: '#4A90E2' },
+    { label: 'Completate', value: loading ? '-' : String(stats?.completed || 0), icon: CheckCircle2, color: '#10B981' },
+    { label: 'Trattamenti', value: loading ? '-' : String(stats?.instructorCount || 0), icon: Users, color: '#F59E0B' },
   ];
 
   return (
     <div className="space-y-6 md:space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div>
         <h1 className="text-2xl md:text-4xl font-black text-black tracking-tighter mb-1 italic">Benvenuto, {user.name.split(' ')[0]}!</h1>
-        <p className="text-[#4B5563] text-sm md:text-base">Ecco cosa sta succedendo oggi nel tuo percorso Wave.</p>
+        <p className="text-[#4B5563] text-sm md:text-base">Gestisci le tue visite osteopatiche presso lo studio di Giulia Patti.</p>
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
@@ -503,11 +503,11 @@ const DashboardHome: React.FC<{ user: { name: string; id: string }; onBook: () =
                   <div className="space-y-2.5 opacity-90 text-sm md:text-base">
                     <div className="flex items-center gap-3">
                       <Users size={20} className="flex-shrink-0" />
-                      <span className="font-bold">Con: {nextBooking.schedule_slots?.instructor?.name || 'Istruttore'}</span>
+                      <span className="font-bold">Con: {nextBooking.schedule_slots?.instructor?.name || 'Dott.ssa Giulia Patti'}</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <MapPin size={20} className="flex-shrink-0" />
-                      <span className="font-medium">{nextBooking.schedule_slots?.class_type || 'Pilates'} - Studio Osteopatia</span>
+                      <span className="font-medium">{nextBooking.schedule_slots?.class_type || 'Trattamento Osteopatico'} - Studio Giulia Patti</span>
                     </div>
                   </div>
                 </div>
@@ -516,8 +516,8 @@ const DashboardHome: React.FC<{ user: { name: string; id: string }; onBook: () =
           ) : (
             <div className="bg-gradient-to-br from-[#F9FAFB] to-white rounded-3xl md:rounded-[2.5rem] p-6 md:p-10 border border-[#E5E5E5] text-center">
               <Calendar size={48} className="mx-auto text-[#9CA3AF] mb-4" />
-              <h3 className="text-xl font-black text-black mb-2">Nessun appuntamento</h3>
-              <p className="text-[#4B5563] text-sm mb-6">Prenota la tua prossima seduta osteopatica!</p>
+              <h3 className="text-xl font-black text-black mb-2">Nessuna visita programmata</h3>
+              <p className="text-[#4B5563] text-sm mb-6">Prenota la tua prossima visita osteopatica!</p>
               <button
                 onClick={onBook}
                 className="h-14 bg-[#4A90E2] text-white px-8 rounded-xl font-bold hover:scale-105 active:scale-95 transition-all text-sm shadow-xl"
@@ -581,9 +581,9 @@ const DashboardHome: React.FC<{ user: { name: string; id: string }; onBook: () =
           <div className="bg-white rounded-3xl md:rounded-[2.5rem] p-6 md:p-10 border border-[#E5E5E5] shadow-sm">
             <h3 className="font-black text-lg mb-6">NOVITÀ STUDIO</h3>
             <div className="aspect-[16/9] rounded-2xl bg-[#F9FAFB] mb-6 overflow-hidden relative group">
-              <img src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover transition-all duration-700" alt="News" />
+              <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover transition-all duration-700" alt="News" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5">
-                <p className="text-white text-sm font-black uppercase tracking-tight leading-tight">Lancio Nuovi Corsi Reformer Avanzato</p>
+                <p className="text-white text-sm font-black uppercase tracking-tight leading-tight">Nuovi Trattamenti per Mal di Schiena</p>
                 <p className="text-white/60 text-[10px] font-bold mt-1">12 GEN 2026</p>
               </div>
             </div>
@@ -796,8 +796,8 @@ const BookingFlow: React.FC<{ userId: string; preSelectedInstructor?: DBInstruct
         {step === 1 && (
           <div className="space-y-8">
             <div className="text-center md:text-left">
-              <h2 className="text-2xl md:text-3xl font-black text-black tracking-tight">Seleziona l'Istruttore</h2>
-              <p className="text-[#4B5563] text-sm mt-1">Scegli il tuo coach dedicato.</p>
+              <h2 className="text-2xl md:text-3xl font-black text-black tracking-tight">Seleziona l'Osteopata</h2>
+              <p className="text-[#4B5563] text-sm mt-1">Scegli il professionista per la tua visita.</p>
             </div>
             {loading ? (
               <div className="flex items-center justify-center py-12">
@@ -815,7 +815,7 @@ const BookingFlow: React.FC<{ userId: string; preSelectedInstructor?: DBInstruct
                       <Users size={24} />
                     </div>
                     <div>
-                      <p className="font-black text-lg text-black">Qualsiasi Istruttore</p>
+                      <p className="font-black text-lg text-black">Qualsiasi Osteopata</p>
                       <p className="text-xs text-[#9CA3AF] uppercase font-bold tracking-[0.2em]">Il primo disponibile</p>
                     </div>
                   </div>
@@ -836,7 +836,7 @@ const BookingFlow: React.FC<{ userId: string; preSelectedInstructor?: DBInstruct
                       </div>
                       <div>
                         <p className="font-black text-lg text-black">{inst.name}</p>
-                        <p className="text-xs text-[#9CA3AF] uppercase font-bold tracking-[0.2em]">Osteopata</p>
+                        <p className="text-xs text-[#9CA3AF] uppercase font-bold tracking-[0.2em]">Osteopata BSc</p>
                       </div>
                     </div>
                   </div>
@@ -851,7 +851,7 @@ const BookingFlow: React.FC<{ userId: string; preSelectedInstructor?: DBInstruct
             <div className="text-center md:text-left">
               <h2 className="text-2xl md:text-3xl font-black text-black tracking-tight">Data e Ora</h2>
               <p className="text-[#4B5563] text-sm mt-1">
-                {selectedInstructor ? `Con ${selectedInstructor.name}` : 'Qualsiasi istruttore disponibile'}
+                {selectedInstructor ? `Con ${selectedInstructor.name}` : 'Qualsiasi osteopata disponibile'}
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -957,7 +957,7 @@ const BookingFlow: React.FC<{ userId: string; preSelectedInstructor?: DBInstruct
                             <div className="text-left">
                               <span className="font-black text-sm block">{time} - {endTimeStr}</span>
                               <span className={`text-[10px] font-bold ${isSelected ? 'text-white/80' : 'text-[#9CA3AF]'}`}>
-                                {slot.instructor?.name || 'Istruttore'}
+                                {slot.instructor?.name || 'Dott.ssa Patti'}
                               </span>
                             </div>
                             <div className="text-right">
@@ -1005,7 +1005,7 @@ const BookingFlow: React.FC<{ userId: string; preSelectedInstructor?: DBInstruct
               </div>
             </div>
             <button onClick={() => setStep(1)} className="w-full md:w-auto flex items-center justify-center gap-2 h-14 text-[#9CA3AF] hover:text-black font-bold text-sm">
-              <ArrowLeft size={18} /> Torna a Istruttori
+              <ArrowLeft size={18} /> Torna alla selezione
             </button>
           </div>
         )}
@@ -1032,8 +1032,8 @@ const BookingFlow: React.FC<{ userId: string; preSelectedInstructor?: DBInstruct
                   <p className="text-xl font-black text-black mt-1">{selectedSlot.class_type}</p>
                 </div>
                 <div>
-                  <label className="text-[10px] font-black uppercase tracking-[0.3em] text-[#9CA3AF]">Istruttore</label>
-                  <p className="text-xl font-black text-black mt-1">{selectedSlot.instructor?.name || 'Istruttore'}</p>
+                  <label className="text-[10px] font-black uppercase tracking-[0.3em] text-[#9CA3AF]">Osteopata</label>
+                  <p className="text-xl font-black text-black mt-1">{selectedSlot.instructor?.name || 'Dott.ssa Patti'}</p>
                 </div>
                 <div>
                   <label className="text-[10px] font-black uppercase tracking-[0.3em] text-[#9CA3AF]">Data e Ora</label>
@@ -1082,10 +1082,10 @@ const BookingFlow: React.FC<{ userId: string; preSelectedInstructor?: DBInstruct
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle2 size={40} className="text-green-600" />
             </div>
-            <h3 className="text-2xl font-black text-black mb-3">Prenotazione Confermata!</h3>
-            <p className="text-[#4B5563] mb-8">Riceverai una mail di conferma a breve con tutti i dettagli del tuo appuntamento.</p>
+            <h3 className="text-2xl font-black text-black mb-3">Visita Confermata!</h3>
+            <p className="text-[#4B5563] mb-8">Riceverai una mail di conferma a breve con tutti i dettagli della tua visita.</p>
             <div className="bg-[#F9FAFB] p-4 rounded-2xl mb-8 text-left">
-              <p className="text-sm"><strong>{selectedSlot.class_type}</strong> con {selectedSlot.instructor?.name || 'Istruttore'}</p>
+              <p className="text-sm"><strong>{selectedSlot.class_type}</strong> con {selectedSlot.instructor?.name || 'Dott.ssa Patti'}</p>
               <p className="text-xs text-[#9CA3AF] mt-1">
                 {new Date(selectedDate).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' })} alle {selectedSlot.start_time.substring(0, 5)}
               </p>
@@ -1115,7 +1115,7 @@ const BookingFlow: React.FC<{ userId: string; preSelectedInstructor?: DBInstruct
               <p className="text-amber-600 text-xs font-bold uppercase tracking-widest mt-1">La tua posizione</p>
             </div>
             <div className="bg-[#F9FAFB] p-4 rounded-2xl mb-8 text-left">
-              <p className="text-sm"><strong>{selectedSlot.class_type}</strong> con {selectedSlot.instructor?.name || 'Istruttore'}</p>
+              <p className="text-sm"><strong>{selectedSlot.class_type}</strong> con {selectedSlot.instructor?.name || 'Dott.ssa Patti'}</p>
               <p className="text-xs text-[#9CA3AF] mt-1">
                 {new Date(selectedDate).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' })} alle {selectedSlot.start_time.substring(0, 5)}
               </p>
@@ -1235,8 +1235,8 @@ const MyAppointments: React.FC<{ userId: string }> = ({ userId }) => {
     <div className="space-y-8 max-w-5xl mx-auto pb-20">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
-          <h1 className="text-3xl font-black text-black tracking-tighter italic">I Miei Appuntamenti</h1>
-          <p className="text-sm text-[#4B5563]">Gestisci il tuo calendario attività.</p>
+          <h1 className="text-3xl font-black text-black tracking-tighter italic">Le Mie Visite</h1>
+          <p className="text-sm text-[#4B5563]">Gestisci le tue visite osteopatiche.</p>
         </div>
         <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scroll-hide">
           {(['Tutti', 'Prossimi', 'Passati'] as const).map(f => (
@@ -1303,18 +1303,18 @@ const MyAppointments: React.FC<{ userId: string }> = ({ userId }) => {
                     </span>
                   </div>
                   <h4 className="text-2xl md:text-3xl font-black tracking-tight text-black">
-                    {slotData?.class_type || 'Pilates'}
+                    {slotData?.class_type || 'Trattamento Osteopatico'}
                   </h4>
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
                     {slotData?.instructor?.name && (
                       <div className="flex items-center gap-2 text-sm text-[#4B5563] font-medium">
                         <Users size={18} className="text-[#4A90E2]" />
-                        <span>Istruttore: <strong>{slotData.instructor.name}</strong></span>
+                        <span>Osteopata: <strong>{slotData.instructor.name}</strong></span>
                       </div>
                     )}
                     <div className="flex items-center gap-2 text-sm text-[#4B5563] font-medium">
                       <MapPin size={18} className="text-[#4A90E2]" />
-                      <span>Studio Osteopatia</span>
+                      <span>Studio Giulia Patti</span>
                     </div>
                   </div>
                 </div>
@@ -1390,9 +1390,9 @@ const InstructorsView: React.FC<{ onBookInstructor: (instructor: DBInstructor) =
           </div>
           <div className="p-8 md:p-12">
             <h3 className="text-3xl font-black mb-1 text-black italic leading-none">{inst.name}</h3>
-            <p className="text-xs font-black text-[#4A90E2] uppercase tracking-[0.2em] mb-6">Osteopata</p>
+            <p className="text-xs font-black text-[#4A90E2] uppercase tracking-[0.2em] mb-6">Osteopata BSc Hons</p>
             <p className="text-base text-[#4B5563] leading-relaxed mb-10">
-              {inst.bio || 'Istruttore certificato presso Studio Osteopatia Pilates.'}
+              {inst.bio || 'Osteopata qualificata con laurea conseguita con Honours. Specializzata in trattamenti osteopatici strutturali.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -1546,7 +1546,7 @@ const NotificationsView: React.FC<{ userId: string }> = ({ userId }) => {
                   <div className="flex items-center gap-4">
                     <div className={`w-3 h-3 rounded-full ring-4 ${expired ? 'bg-red-500 ring-red-100' : 'bg-green-500 ring-green-100 animate-pulse'}`}></div>
                     <h4 className="font-black text-black text-base md:text-lg leading-snug">
-                      {expired ? 'Tempo scaduto' : 'Posto disponibile!'} {slot?.class_type || 'Pilates'} alle {time}
+                      {expired ? 'Tempo scaduto' : 'Posto disponibile!'} {slot?.class_type || 'Trattamento'} alle {time}
                     </h4>
                   </div>
                   {!expired && timeRemaining && (
@@ -1604,7 +1604,7 @@ const NotificationsView: React.FC<{ userId: string }> = ({ userId }) => {
                     <div className="flex items-center gap-4">
                       {urgent && <div className="w-2.5 h-2.5 bg-[#4A90E2] rounded-full ring-4 ring-[#E8F4FF]"></div>}
                       <h4 className="font-black text-black text-base md:text-lg leading-snug">
-                        Promemoria: {booking.schedule_slots?.class_type || 'Pilates'} alle {time}
+                        Promemoria: {booking.schedule_slots?.class_type || 'Trattamento'} alle {time}
                       </h4>
                     </div>
                     <span className={`text-[10px] font-black uppercase tracking-[0.2em] whitespace-nowrap ${urgent ? 'text-[#4A90E2]' : 'text-[#9CA3AF]'}`}>
@@ -1612,7 +1612,7 @@ const NotificationsView: React.FC<{ userId: string }> = ({ userId }) => {
                     </span>
                   </div>
                   <p className="text-sm md:text-base text-[#4B5563] ml-0 md:ml-6.5 font-medium leading-relaxed">
-                    Con: {booking.schedule_slots?.instructor?.name || 'Istruttore'} - Studio Osteopatia Pilates
+                    Con: {booking.schedule_slots?.instructor?.name || 'Dott.ssa Patti'} - Studio Giulia Patti
                   </p>
                 </div>
               );
@@ -1769,7 +1769,7 @@ const WaitlistView: React.FC<{ userId: string }> = ({ userId }) => {
           <ListOrdered size={56} className="mx-auto text-[#9CA3AF] mb-4" />
           <h3 className="text-xl font-black text-black mb-2">Nessuna lista d'attesa attiva</h3>
           <p className="text-[#4B5563] text-sm max-w-md mx-auto">
-            Quando ti iscrivi a una lista d'attesa per una lezione piena, apparirà qui.
+            Quando ti iscrivi a una lista d'attesa per una visita al completo, apparirà qui.
             Ti notificheremo quando un posto si libera!
           </p>
         </div>
@@ -1841,7 +1841,7 @@ const WaitlistView: React.FC<{ userId: string }> = ({ userId }) => {
 
                     {/* Class Info */}
                     <h3 className="text-xl md:text-2xl font-black text-black">
-                      {slot?.class_type || 'Pilates'}
+                      {slot?.class_type || 'Trattamento Osteopatico'}
                     </h3>
 
                     <div className="flex flex-wrap gap-4 text-sm text-[#4B5563]">
@@ -1923,7 +1923,7 @@ const WaitlistView: React.FC<{ userId: string }> = ({ userId }) => {
           Come funziona la lista d'attesa?
         </h3>
         <div className="space-y-3 text-sm text-[#4B5563]">
-          <p><strong>1.</strong> Quando una lezione è piena, puoi iscriverti alla lista d'attesa.</p>
+          <p><strong>1.</strong> Quando una visita è al completo, puoi iscriverti alla lista d'attesa.</p>
           <p><strong>2.</strong> Se qualcuno cancella, riceverai una notifica email.</p>
           <p><strong>3.</strong> Hai <strong>2 ore</strong> per confermare il posto, altrimenti passa al prossimo in lista.</p>
           <p><strong>4.</strong> Puoi uscire dalla lista d'attesa in qualsiasi momento.</p>
@@ -2063,8 +2063,8 @@ const SettingsView: React.FC<{ user: { name: string; email: string; id: string }
         <div className="space-y-4">
           {[
             { label: 'Notifiche Email', desc: 'Ricevi aggiornamenti e conferme via email', active: true },
-            { label: 'Promemoria Appuntamenti', desc: 'Ricevi alert 24 ore prima delle sessioni', active: true },
-            { label: 'Newsletter Wave', desc: 'Sconti esclusivi e novità mensili', active: false }
+            { label: 'Promemoria Visite', desc: 'Ricevi alert 24 ore prima delle visite', active: true },
+            { label: 'Newsletter Studio', desc: 'Consigli di salute e novità dallo studio', active: false }
           ].map((pref, i) => (
             <div key={i} className="flex items-center justify-between p-6 bg-[#F9FAFB] rounded-[1.5rem] border border-black/5 active:scale-[0.99] transition-transform cursor-pointer">
               <div className="pr-4">
